@@ -2,7 +2,7 @@
 
 ## 1. Obiekty gry i komponenty.
 
-Obiekt gry (GameObject) to każdy obiekt, który pojawia się w grze, również taki, który nie jest widoczny, np. kamera, niewidzialna przeszkoda, dźwięki. Obiekty gry same w sobie nie posiadają jakiegoś zachowania i dopiero poprzez 'podpinanie' komponentów (ang. component) możemy nadać im pewne cechy i zachowania.
+Obiekt gry (GameObject) to każdy obiekt, który pojawia się w grze, również taki, który nie jest widoczny, np. kamera, niewidzialna przeszkoda, dźwięki. Obiekty gry same w sobie nie posiadają jakiegoś zachowania i dopiero poprzez 'podpinanie' komponentów możemy nadać im pewne cechy i zachowania.
 
 Unity posiada spory zbiór obiektów, które posiadają już dołączone komponenty, ale możemy zmieniać konfigurację zarówno samych komponentów jak i ich kombinacji.
 
