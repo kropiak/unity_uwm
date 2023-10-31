@@ -106,6 +106,7 @@ Podpięcie tego komponentu nie oznacza, że nasza postać (obiekt) będzie od ra
 Wykorzystaj kod z ```listingu 1``` i zmodyfikuj go tak, aby możliwe było:
 * określenie w inspektorze ilości obiektów losowych do wegenerowania,
 * pozycje ```x``` oraz ```z``` były pobierane adekwatnie dla obiektu platformy, do której skrypt jest dołączany (zakładamy, że tak będzie),
+> Wskazówka: https://docs.unity3d.com/ScriptReference/Bounds.html
 * dodaj do swojego projektu nowe materiały, tak, aby było 5 różnych do wykorzystania i przydzielaj losowo materiał w trakcie tworzenia nowego obiektu.
 
 **Zadanie 2**  
