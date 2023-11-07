@@ -1,4 +1,4 @@
-# Lab 6 - Wykrywanie i obsługa kolizji.
+# Lab 5 - Wykrywanie i obsługa kolizji.
 
 Wykrywanie kolizji oraz odpowiednie reagowanie na zdarzenia przez nie generowane jest jednym z głównych elementów, który daje wrażenie interakcji elementów gry między sobą często w sposób naśladujący zachowanie w świecie rzeczywistym.
 Każdy kto spędził trochę czasu nad implementacją kolizji w swoim projekcie na pewno wie, że nie jest to sprawa prosta i sam silnik, nawet najlepszy, nie dostarcza wszystkich rozwiązań out of the box. W przypadku Unity, też można się szybko przekonać, że teoria a praktyka to różna para kaloszy.
