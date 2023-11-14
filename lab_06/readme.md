@@ -108,6 +108,8 @@ Zaimportuj grafikę przedstawiającą [Trolla](assets/Troll2.png) i dodaj do nie
 **Zadanie 4**  
 Dodaj szkielet na scenę, ułóż elementy w odpowiednim porządku i sprawdź czy kolejność kości jest poprawna. Dodaj komponent `Sprite Skin` i wksaż kość bazową.
 
+W ramach rozliczenia z zadań za bieżący lab, proszę udostępnić screen z przygotowanym poziomem z zadania numer 2. Postać z zadania numer 4 będzie potrzebna na kolejnych zajęciach.
+
 
 Materiały użyte w laboratorium pochodzą z:
 * https://opengameart.org/content/2d-lost-garden-zelda-style-tiles-resized-to-32x32-with-additions
