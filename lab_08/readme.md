@@ -29,7 +29,7 @@ Podstawy tworzenia animacji oraz obsługi maszyny stanów animacji zostaną zapr
 
 ## 4. Dodajemy kilka gotowych elementów
 
-Assety są dostępne w labie numer 7 - [freetilesets](../lab_07/assets/freetileset.zip).
+Assety są dostępne w labie numer 6 - [freetilesets](../lab_06/assets/freetileset.zip).
 
 Skrypty do poruszania postacią. Skrypty pochodzą ze zbiorów Brackey's, ale zostały zmodyfikowane.
 
