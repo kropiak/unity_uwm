@@ -40,6 +40,6 @@ Film jest podzielony na dwie części, gdzie w pierwszej wykorzystane są gotowe
 Postać latającego wroga możesz wykorzystać używając gotowego pakietu https://craftpix.net/freebies/free-wraith-tiny-style-2d-sprites/ lub dowolnego wybranego przez siebie (bez łamania praw autorskich).
 
 
-> UWAGA!: Jako wynik pracy w repozytorium dodajemy skrypt dla zadania 1, który steruje zachowaniem przeciwnika naziemnego.
+> **UWAGA!**: Jako wynik pracy w repozytorium dodajemy skrypt dla zadania 1, który steruje zachowaniem przeciwnika naziemnego.
 
-Dla zadania 2 można nagrać krótki film prezentujący poruszanie się wroga powietrznego lub umieścić spakowany projekt w podobnej formie jak projekt startowy dołączony do labu 9.
+>Dla zadania 2 można nagrać krótki film prezentujący poruszanie się wroga powietrznego lub umieścić spakowany projekt w podobnej formie jak projekt startowy dołączony do labu 9.
