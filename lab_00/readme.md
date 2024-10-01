@@ -4,7 +4,7 @@
 
 Unity występuje w kilku wersjach (więcej pod adresem https://unity.com/faq) w zależności od wielkości organizacji i przychodów, które osiąga w danym roku. Wersja, która będzie wykorzystywana w trakcie zajęć to edycja Personal. Tabelka porównująca poszczególne plany dostępna jest pod adresem: https://unity.com/compare-plans.
 
-W ostatnim czasie pojawiły się informacje od kierownictwa Unity o chęci zmiany cennika, które odbiły sie szerokim echem wśród społeczności i ostatecznie skloniły firmę do daleko idących ustępstw. Więcej można przeczytać w liscie otwartym: https://blog.unity.com/news/open-letter-on-runtime-fee.
+W ostatnim czasie pojawiły się informacje od kierownictwa Unity o chęci zmiany cennika, które odbiły sie szerokim echem wśród społeczności i ostatecznie skloniły firmę do daleko idących ustępstw. UPDATE 2024 - plany zostały jednak porzucone. Więcej można przeczytać w liscie otwartym: https://blog.unity.com/news/open-letter-on-runtime-fee.
 
 ## 1. Instalacja UNITY
 
@@ -26,7 +26,7 @@ Część **Learn** pozwala na dodanie istniejących projektów gier, stworzonych
 
 Ostatnia, ale nie najmniej ważna opcja, to **Installs** gdzie możemy pobrać i zainstalować kolejne wersje środowiska, odinstalować istniejące lub zarządzać modułami dla konkretnej zainstalowanej wersji.
 
-W trakcie zajęć wykorzystywana będzie wersja **2022.3.10f1 LTS**. Jest to wersja o długim wsparciu technicznym. Pobranie i instalacja wymaga sporo czasu (dużo zależy od szybkości łącza internetowego) więc należy wybrać miejsce z wystarczająco dużą ilością wolnego miejsca. Moduły, które wybieramy na początku to:
+W trakcie zajęć wykorzystywana będzie wersja **2022.3.48f1 LTS**. Jest to wersja o długim wsparciu technicznym. Pobranie i instalacja wymaga sporo czasu (dużo zależy od szybkości łącza internetowego) więc należy wybrać miejsce z wystarczająco dużą ilością wolnego miejsca. Moduły, które wybieramy na początku to:
 * **Windows Build support** lub **Linux build support** lub **Mac build support** w zależności od używanego systemeu operacyjnego,
 * **Microsoft Visual Studio 2022 Community** lub **Visual Studio Code**,
 * **Documentation** (opcjonalnie) - jeżeli ktoś planuje pracę w trybie offline i nie będzie miał dostępu do dokumentacji dostępnej w Internecie.

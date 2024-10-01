@@ -1,4 +1,4 @@
-# Projektowanie gier w środowisku UNITY
+# Projektowanie gier w środowisku UNITY, semestr 2024Z/2025L
 
 ## **1. Cele przedmiotu.**
 
