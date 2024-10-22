@@ -4,9 +4,9 @@
 ## **Wybrane klasy z API Unity.**
 
 API Unity jest bardzo rozbudowane i nie sposób chociażby pobieżnie omówić wszystkie klasy tam dostępne. Są jednak takie, bez których praktycznie żaden projekt nie może
-istnieć. Zostały one wymienione przez autorów dokumentacji w artykule, którym będziemy się posiłkować: https://docs.unity3d.com/Manual/ScriptingImportantClasses.html
+istnieć. Zostały one wymienione przez autorów dokumentacji w artykule, którym będziemy się posiłkować: https://docs.unity3d.com/2022.3/Documentation/Manual/ScriptingImportantClasses.html
 
-> **Klasa [GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html)**  
+> **Klasa [GameObject](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/GameObject.html)**  
 Jest to klasa reprezentująca dowolny element, który można umieścić na scenie. Z poziomu tej klasy możemy pobierać podpięte pod obiekt komponenty, w tym niezrozłączny komponent `Transform`. Komponent `Transform` jest dostępny poprzez właściwość klasy o nazwie `transform`.
 
 __**Listing 1**__
@@ -20,7 +20,7 @@ public class Ball : MonoBehaviour {
     }
 }
 ```
-Do określenia pozycji w przestrzeni 3D możemy wykorzystać klasę [Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html) lub [Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html) dla 2D.
+Do określenia pozycji w przestrzeni 3D możemy wykorzystać klasę [Vector3](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.html) lub [Vector2](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector2.html) dla 2D.
 Referencje do pozostałych komponentów uzyskujemy w inny sposób. Możemy to zrobić w jednorazowo (dla każdego obiektu) uruchamianej metodzie `Start()`:
 
 __**Listing 2**__
@@ -51,11 +51,11 @@ public class Ball : MonoBehaviour {
     }
 }
 ```
-Oczywiście należy pamiętać, że jeżeli nie przypiszemy obiektu typu `Rigidbody` do zmiennej `rb` w powyższym to otrzymamy stosowny wyjątek: `UnassignedReferenceException: The variable rb of Ball has not been assigned`. Podpięcie instancji komponentu `Rigidbody` pod zmienną `rb` możemy wykonać z poziomu skryptu (jeżeli w oknie inspektora taki komponent do obiektu, który ma również podpięty ten skrypt został dodany) poprzez metodę `GetComponent()` (doc: https://docs.unity3d.com/ScriptReference/Component.GetComponent.html) lub poprzez przeciągnięcie i upuszczenie komponentu `Rigidbody` w miejsce widocznej w inspektorze zmiennej `rb`, która obiekt tego typu może przechowywać. Jeżeli chcemy aby na dany obiekt gry działały siły fizyczne, to będziemy manipulować dodanym do niego komponentem `Rigidbody` a nie poprzez edycję komponentu `Transform`.
+Oczywiście należy pamiętać, że jeżeli nie przypiszemy obiektu typu `Rigidbody` do zmiennej `rb` w powyższym to otrzymamy stosowny wyjątek: `UnassignedReferenceException: The variable rb of Ball has not been assigned`. Podpięcie instancji komponentu `Rigidbody` pod zmienną `rb` możemy wykonać z poziomu skryptu (jeżeli w oknie inspektora taki komponent do obiektu, który ma również podpięty ten skrypt został dodany) poprzez metodę `GetComponent()` (doc: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Component.GetComponent.html) lub poprzez przeciągnięcie i upuszczenie komponentu `Rigidbody` w miejsce widocznej w inspektorze zmiennej `rb`, która obiekt tego typu może przechowywać. Jeżeli chcemy aby na dany obiekt gry działały siły fizyczne, to będziemy manipulować dodanym do niego komponentem `Rigidbody` a nie poprzez edycję komponentu `Transform`.
 
 Jak widać w każdym powyższym fragmencie kodu każda nasza klasa dziedziczy po klasie `MonoBehaviour`. 
 
-> **Klasa [MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)**  
+> **Klasa [MonoBehaviour](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MonoBehaviour.html)**  
 > Jest to klasa, po której dziedziczy każdy nowy skrypt stworzony z poziomu UnityEditor. Ta klasa dostarcza mechanizm pozwalający na podpinanie skryptów pod obiekty gry oraz zapewnia interfejs pozwalający na umieszczenie kodu uruchamianego w określonym momencie pracy silnika lub po wystąpieniu określonego zdarzenia.
 
 Poniżej przykładowy pusty szablon klasy po dodaniu nowego skryptu:
@@ -109,9 +109,9 @@ public class Ball : MonoBehaviour {
 }
 ```
 
-Klasą bazową dla wszystkich klas API Unity jest klasa [Object](https://docs.unity3d.com/ScriptReference/Object.html). Zachęcam do przeczytania krótkiego opisu pod adresem https://docs.unity3d.com/Manual/class-Object.html
+Klasą bazową dla wszystkich klas API Unity jest klasa [Object](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Object.html). Zachęcam do przeczytania krótkiego opisu pod adresem https://docs.unity3d.com/2022.3/Documentation/Manual/class-Object.html
 
-> **Klasa [Quaternion](https://docs.unity3d.com/ScriptReference/Quaternion.html)**  
+> **Klasa [Quaternion](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Quaternion.html)**  
 > Klasa Quaternion służy do przechowywania informacji o trzech składowych obiektu opisujących jego orientację w przestrzeni trójwymiarowej. Dzięki tej klasie możemy też wyznaczać względne parametry obrotu jaki trzeba wykonać, aby obrócić obiekt do wskazanej orientacji. W panelu inspektora,kąty które widzimy w komponencie Transform podane są jako [kąty Eulera](https://pl.wikipedia.org/wiki/K%C4%85ty_Eulera), ale w skryptach powinniśmy używać metod obiektu Quaternion do manipulacji rotacją obiektów. W przeciwnym wypadku może pojawić się problem nazywany `Gimbal lock` (więcej: http://pananimator.pl/gimbal-lock/).
 
 Poniższy fragment kodu obróci obiekt przypisany do zmiennej `from` tak, aby jego wartości rotacji (orientacja) pokryły się z wartościami zapisanymi w obiekcie przypisanym do zmiennej `to`. Trzeci parametr funkcji `Quaternion.Slerp()` to procent o jaki mamy zmienić rotację. Wartości zawierają się w przedziale [0, 1].
@@ -136,7 +136,7 @@ public class QuaternionRotateToPosition : MonoBehaviour
 }
 ```
 
-Manual opisujący więcej przykładów dostępny pod linkiem: https://docs.unity3d.com/Manual/class-Quaternion.html
+Manual opisujący więcej przykładów dostępny pod linkiem: https://docs.unity3d.com/2022.3/Documentation/Manual/class-Quaternion.html
 
 
 Możemy również wykonywać rotacje obiektów poprzez komponent `Transform` i metody `Transform.Rotate()` oraz `Tranform.RotateAround()`, które również operują na obiektach `Quaternion`. Wartości obrotu podawane są w stopniach. Parametrem, który jeszcze musimy przekazać jest parametr `realtiveTo`,który określa czy obrót będzie odbywał się względem lokalnych czy globalnych koordynatów (`Space.Self, Space.World`).
@@ -148,7 +148,7 @@ public void Update {
     cube2.transform.Rotate(xAngle, yAngle, zAngle, Space.World);
 }
 ```
-> **Klasa [Time](https://docs.unity3d.com/ScriptReference/Time.html)**
+> **Klasa [Time](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Time.html)**
 > Klasa ta pozwala na pracę z elementami gier związanymi z czasem. Dzięki tej klasie możemy również wyznaczać czas jaki minął od momentu wygenerowania ostatniej klatki animacji. 
 
 Opisane w manualu trzy najważniejsze składowe klasy `Time`:
@@ -233,7 +233,7 @@ Aby kod poprawnie działał dla wybranego obiektu należy dołączyć do niego k
 >W celu ujednolicenia sposobu przechowywania własnych skryptów w folderze Assets utwórz folder scripts i tam umieszczaj własne skrypty. Dla każdego zadania (poza zadaniem 1) stwórz nową scenę o nazwie równoważnej nazwie zadania (np. zadania1 lub zadanie_1). Jeżeli dla obiektów będących przedmiotem zadania zostaną stworzone prefabrykaty (zalecane) to umieszczanie obiektów na kolejnych scenach będzie dużo łatwiejsze. Warto też wykorzystać opcję `Save as...` i zapisać scenę, na której trzeba bazować, pod nową nazwą.
 
 **Zadanie 1**  
-Przeczytaj artykuł [https://docs.unity3d.com/Manual/VectorCookbook.html](https://docs.unity3d.com/Manual/VectorCookbook.html), który przypomni Ci zagadnienia związane z pojęciem wektorów odległości i sposobu na wykorzystanie tej wiedzy w środowisku Unity.
+Przeczytaj artykuł [https://docs.unity3d.com/Manual/2022.3/Documentation/VectorCookbook.html](https://docs.unity3d.com/2022.3/Documentation/Manual/VectorCookbook.html), który przypomni Ci zagadnienia związane z pojęciem wektorów odległości i sposobu na wykorzystanie tej wiedzy w środowisku Unity.
 
 **Zadanie 2**  
 Stwórz nową scenę. Dodaj do niej obiekt typu Cube o wymiarach (2, 1, 1). Napisz skrypt, z publicznym polem speed (float), który będzie przemieszczał obiekt wzdłóż osi x o 10 jednostek i w momencie wykonania takiego przesunięcia będzie wykonywał ruch powrotny.
@@ -245,9 +245,9 @@ Do obiektu Cube z zadania 2 dodaj jakiś element, który będzie wskazywał na j
 Dodaj nową scenę do swojego projektu. Stwórz obiekt, który będzie obiektem gracza (cube, sphere, cokolwiek).  Dodaj do sceny płaszczyznę o wymiarach 20x20 jednostek. Dodaj możliwość przemieszczania obiektu po płaszczyźnie. 
 
 **Zadanie 5**  
-Wykorzystując możliwość dodawania obiektów czasie wykonania (zobacz: https://docs.unity3d.com/Manual/InstantiatingPrefabs.html) stwórz nową scenę a w niej:
+Wykorzystując możliwość dodawania obiektów czasie wykonania (zobacz: https://docs.unity3d.com/2022.3/Documentation/Manual/InstantiatingPrefabs.html) stwórz nową scenę a w niej:
 * dodaj płaszczyznę o wymiarach 10x10
 * w momencie uruchomienia trybu play generuj 10 obiektów typu Cube, które umieszczaj losowo na płaszczyźnie, ale tak, żeby w danym miejscu nie znalazł się więcej niż jeden obiekt.
 
 **Zadanie 6**  
-Korzystając z przykładu w dokumentacji UNITY dostępnej pod adresem https://docs.unity3d.com/ScriptReference/Mathf.SmoothDamp.html zaimplementuj go dla dwóch obiektów na swojej scenie i przetestuj zmieniając położenie w trybie `game` obiektu, który 'jest śledzony'. Przetestuj również metodę `Mathf.Lerp`.
+Korzystając z przykładu w dokumentacji UNITY dostępnej pod adresem https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.SmoothDamp.html zaimplementuj go dla dwóch obiektów na swojej scenie i przetestuj zmieniając położenie w trybie `game` obiektu, który 'jest śledzony'. Przetestuj również metodę `Mathf.Lerp`.
