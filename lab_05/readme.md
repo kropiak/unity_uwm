@@ -343,7 +343,9 @@ private void OnTriggerEnter(Collider other)
             Debug.Log("Player zszedł z windy.");
             // lub możemy też udtawić parent na null, jeżeli nasz player
             // był potomkiem bezpośrednio naszej sceny
-            other.gameObject.transform.parent = oldParent;
+            // other.gameObject.transform.parent = oldParent;
+            // chociaż w nowej wersji Unity powyższa linia nie działa najlepiej
+            other.gameObject.transform.parent = null;
         }
     }
 ...
