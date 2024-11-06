@@ -363,10 +363,10 @@ Przygotuj prosty model drzwi przesuwanych poziomo, które będą otwierane jeże
 **Zadanie 3**  
 Z przykładów z zajęć oraz zadania 1 przygotuj skrypt, który pozwoli na obsłużenie platformy, która może poruszać się dowolnie w przestrzeni od punktu do punktu. Punkty (w postaci obiektu `Vector3`) są przechowywane w dowolnej wybranej kolekcji. Wypróbuj możliwość dodawania kolejnych waypointów poprzez panel `Inspektor`. Platforma porusza się od pierwszego do kolejnego punktu i jak dotrze do ostatniego punktu, zawraca (czyli podąża tą samą drogą w przeciwnym kierunku).
 
-**Zadanie 5**  
+**Zadanie 4**  
 _(Zadanie dotyczy poziomu z lab 04)_    
 Stwórz nowy obiekt na scenie imitujący płytę naciskową. Po wejściu na nią (kolizja ?) gracz powinien zostać wyrzucony w powietrze z trzykrotnie większą "siłą" niż w przypadku skoku.
 
-**Zadanie 6**  
+**Zadanie 5**  
 _(Zadanie dotyczy poziomu z lab 04)_  
 Stwórz nowy obiekt, który będzie obiektem przeszkodą, dodaj do niego tag. Stwórz z tego obiektu prefabrykat i dodaj kilka instancji prefabrykatu do sceny w różnych miejscach poziomu. Dodaj do obiektu gracza skrypt, który będzie zawierał kod sprawdzający czy doszło do kontaktu pomiędzy graczem a przeszkodą (można wyszukiwać obiekty za pomocą tagu). Wyświetlaj komunikat o rozpoczęciu kontaktu w konsoli.
