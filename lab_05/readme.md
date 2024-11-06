@@ -306,9 +306,81 @@ public class Elevator : MonoBehaviour
 }
 ```
 
+> Listing 4 - inna, poprawiona wersja skryptu dla pionowej platformy.
+
+```csharp
+using UnityEngine;
+
+
+public class Elevator : MonoBehaviour
+{
+    public float elevatorSpeed = 2f;
+    private bool isRunning = false;
+    public float distanceToMove = 6.6f;
+    private bool isUp = false;
+    private bool isDown = true;
+    private Vector3 downPosition;
+    private Vector3 upPosition;
+    private Vector3 currentTarget;
+
+    void Start()
+    {
+        upPosition = transform.position + new Vector3(0, distanceToMove, 0);
+        downPosition = transform.position;
+        currentTarget = upPosition;
+    }
+
+    void Update()
+    {
+        if (isRunning)
+        {
+            if(Vector3.Distance(transform.position, currentTarget) < 0.02f){
+                if(currentTarget == upPosition){
+                    isUp = true;
+                }
+                else if(currentTarget == downPosition){
+                    isDown = true;
+                }
+                isRunning = false;
+                return;
+            }
+            transform.position = Vector3.MoveTowards(transform.position, currentTarget, elevatorSpeed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter (Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player wszedł na windę.");
+           
+            if (isUp)
+            {
+                isUp = false;
+                currentTarget = downPosition;
+            }
+            else if (isDown)
+            {
+                isDown = false;
+                currentTarget = upPosition;
+            }
+            isRunning = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player zszedł z windy.");
+        }
+    }
+}
+```
+
 Inną techniką jest zmiana własności ```parent``` obiektu gracza. Przydaje się szczegółnie w sytuacjach gdy przemieszczany obiekt nie jest w stanie 'pchać' ze sobą gracza.
 
-> Listing 4 - zmiana własności parent gracza.
+> Listing 5 - zmiana własności parent gracza.
 ```csharp
 ...
 private void OnTriggerEnter(Collider other)
