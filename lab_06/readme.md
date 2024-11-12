@@ -11,7 +11,7 @@
 
 
 
-Materiały zawarte w tym laboratorium są tylko częścią tego co można znaleść w oficjalnej dokumentacji dla projektów 2D w Unity. Aby zdobyć rozeznanie w szerszym aspekcie przeczytaj część znajdującą się pod adresem: https://docs.unity3d.com/2022.3/Documentation/Manual/Unity2D.html
+Materiały zawarte w tym laboratorium są tylko częścią tego co można znaleźć w oficjalnej dokumentacji dla projektów 2D w Unity. Aby zdobyć rozeznanie w szerszym aspekcie przeczytaj część znajdującą się pod adresem: https://docs.unity3d.com/2022.3/Documentation/Manual/Unity2D.html
 
 
 ## 1. **Import grafiki 2D do projektu Unity**
