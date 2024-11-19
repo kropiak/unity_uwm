@@ -194,6 +194,21 @@ Aby sterowanie głównym bohaterem działało poprawnie trzeba jeszcze dodać w 
 
 ![Script details](movement_script_settings.png)
 
+Zbiór komponentów dla głównego bohatera:
+
+![Component list](player_components.png)
+
+Ustawienia komponentu Rigidbody2D dla głównego bohatera:
+
+![Rigidbody settings](player_rigidbody_settings.png)
+
+Własność **What Is Ground** wskazuje na obiekt typu LayerMask, czyli warstwę, którą ustawimy jako warstawę zawierającą elementy podłoża naszego poziomu gry np. platformy. Na poniższym zrzucie ekranu zaprezentowano kilka kolejnych ustawień. W panelu **hierarchy** widać istniejący obiekt **GroundCheckObject**, który jest usytułowany w okolicach stóp głównego bohatera a promieniu 0.25 jednostki od tego punktu będą wykrywane kolizje (overlap) z dowolnym obiektem, który znajduje się na utworzonej warstwie o nazwie **ground** (widać po prawej stronie zrzutu w oknie **Inspector**).
+
+Na zrzucie znajduje się również platforma stworzona za pomocą Sprite Shape Profile (Open shape), do której został dodany collider oraz została ona umieszczona właśnie na warstwie **ground**.
+
+![Ground settings](ground_settings.png)
+
+
 **Zadania**
 
 1. Dodaj animację dla skoku, ataku oraz otrzymania obrażeń.
